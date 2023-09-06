@@ -1,0 +1,121 @@
+1.What do you understand By Database ?
+-->A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system .
+
+2.What is Normalization? 
+-->In database management systems (DBMS), normal forms are a series of guidelines that help to ensure that the design of a database is efficient, organized, and free from data anomalies. 
+
+3.What is Difference between DBMS and RDBMS?
+-->            DBMS                                            RDBMS
+    1.DBMS stores data as file.	                   1.RDBMS stores data in tabular form.
+    2.Data elements need to access 	           2.Multiple data elements can be accessed 
+      individually.                                  at the same time.
+    3.No relationship between data.	           3.Data is stored in the form of tables which 
+                                                     are related to each other.
+    4.Normalization is not present.	           4.Normalization is present.
+    5.DBMS does not support distributed            5.RDBMS supports distributed database.
+      database.
+    6.It stores data in either a navigational      6.It uses a tabular structure where the headers are 
+       or hierarchical form.	                    the column names, and the rows contain corresponding values.
+    7.It deals with small quantity of data.	   7.It deals with large amount of data.
+    8.Data redundancy is common in this model.	   8.Keys and indexes do not allow Data redundancy.
+    9.It is used for small organization and deal   9.It is used to handle large amount of data.
+      with small data.
+   10.Not all Codd rules are satisfied.	           10.All 12 Codd rules are satisfied.
+   11.Security is less	                           11.More security measures provided.
+   12.It supports single user.	                   12.It supports multiple users.
+
+4.MF Cod Rule of RDBMS Systems? 
+-->Rule 0 − Foundation rule
+
+Any relational database management system that is propounded to be RDBMS or advocated to be a RDBMS should be able to manage the stored data in its entirety through its relational capabilities.
+
+Rule 1 − Rule of Information
+
+Relational Databases should store the data in the form of relations. Tables are relations in Relational Database Management Systems. Be it any user defined data or meta-data, it is important to store the value as an entity in the table cells.
+
+Rule 2 − Rule of Guaranteed Access
+
+The use of pointers to access data logically is strictly forbidden. Every data entity which is atomic in nature should be accessed logically by using a right combination of the name of table, primary key represented by a specific row value and column name represented by attribute value.
+
+Rule 3 − Rule of Systematic Null Value Support
+
+Null values are completely supported in relational databases. They should be uniformly considered as ‘missing information’. Null values are independent of any data type. They should not be mistaken for blanks or zeroes or empty strings. Null values can also be interpreted as ‘inapplicable data’ or ‘unknown information.’
+
+Rule 4 − Rule of Active and online relational Catalog
+
+In the Database Management Systems lexicon, ‘metadata’ is the data about the database or the data about the data. The active online catalog that stores the metadata is called ‘Data dictionary’. The so called data dictionary is accessible only by authored users who have the required privileges and the query languages used for accessing the database should be used for accessing the data of data dictionary.
+
+Rule 5 − Rule of Comprehensive Data Sub-language
+
+A single robust language should be able to define integrity constraints, views, data manipulations, transactions and authorizations. If the database allows access to the aforementioned ones, it is violating this rule.
+
+Rule 6 − Rule of Updating Views
+
+Views should reflect the updates of their respective base tables and vice versa. A view is a logical table which shows restricted data. Views generally make the data readable but not modifiable. Views help in data abstraction.
+
+Rule 7 − Rule of Set level insertion, update and deletion
+
+A single operation should be sufficient to retrieve, insert, update and delete the data.
+
+Rule 8 − Rule of Physical Data Independence
+
+Batch and end user operations are logically separated from physical storage and respective access methods.
+
+Rule 9 − Rule of Logical Data Independence
+
+Batch and end users can change the database schema without having to recreate it or recreate the applications built upon it.
+
+Rule 10 − Rule of Integrity Independence
+
+Integrity constraints should be available and stored as metadata in data dictionary and not in the application programs.
+
+Rule 11 − Rule of Distribution Independence
+
+The Data Manipulation Language of the relational system should not be concerned about the physical data storage and no alterations should be required if the physical data is centralized or distributed.
+
+Rule 12 − Rule of Non Subversion
+
+Any row should obey the security and integrity constraints imposed. No special privileges are applicable.
+
+5.What do you understand By Data Redundancy?
+-->Data redundancy occurs when the same piece of data exists in multiple places, whereas data inconsistency is when the same data exists in different formats in multiple tables. 
+
+6.What is DDL Interpreter? 
+-->interprets the DDL statements such as schema definition statements like create, delete, etc.
+
+7.What is DML Compiler in SQL?
+-->It processes the DML statements into low level instruction (machine language), so that they can be executed.
+
+8.What is SQL Key Constraints writing an Example of SQL Key Constraints
+-->SQL constraints are used to specify rules for the data in a table.
+   EXAMPLE:-
+   CREATE TABLE sample_table
+(
+column1 data_type(size) constraint_name,
+column2 data_type(size) constraint_name,
+column3 data_type(size) constraint_name,
+....
+);
+
+sample_table: Name of the table to be created.
+data_type: Type of data that can be stored in the field.
+constraint_name: Name of the constraint. for example- NOT NULL, UNIQUE, PRIMARY KEY etc. 
+
+9.What is save Point? How to create a save Point write a Query? 
+-->creates points within the groups of transactions in which to ROLLBACK.
+   SAVEPOINT SAVEPOINT_NAME;
+
+10. What is trigger and how to create a Trigger in SQL?
+-->An SQL trigger is a database object that is associated with a table and automatically executes a set of SQL statements when a specific event occurs on that table.
+   *CREAT
+    create trigger [trigger_name] 
+
+[before | after]  
+
+{insert | update | delete}  
+
+on [table_name]  
+
+[for each row]  
+
+[trigger_body] 
